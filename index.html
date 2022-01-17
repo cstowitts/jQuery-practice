@@ -74,7 +74,23 @@
 </div>
 <script src="https://unpkg.com/jquery"></script>
 <script>
-  // Add your code here!
+  /** Give all images inside of an article tag the class of image-center (this class is defined inside of the style tag in the head). */
+  $("article img").addClass("image-center");
+  
+  /** Remove the last paragraph in the article. */
+  $("article p:last").remove();
+
+  /** Set the font size of the title to be a random pixel size from 0 to 100. */
+  function randomPxSize (){
+    return (Math.floor(Math.random() * 101));
+  }
+  $("#title").css("font-size", randomPxSize());
+
+  /** Add an item to the list; it can say whatever you want. */
+  $("li").append("<li>Whatever you want!</li>"); //have to use append to have it show up on the DOM
+
+
+
 </script>
 </body>
 
